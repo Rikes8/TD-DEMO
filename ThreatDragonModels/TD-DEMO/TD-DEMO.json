@@ -112,11 +112,13 @@
                 "text": "Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -130,13 +132,40 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": true,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "631775ad-b3db-4a82-9abf-6d432868f885",
+                  "title": "Unauthorised access",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker could make a query call on the DB.",
+                  "mitigation": "Require all queries to be authenticated.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "19f53931-d5e8-4fe3-ada5-77ea23df778d",
+                  "title": "Credential theft",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "An attacker could obtain the DB credentials and use them to make unauthorized queries.",
+                  "mitigation": "Use a firewall to restrict access to the DB to only the Background Worker IP address.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -153,11 +182,13 @@
                 "text": "Web Application Config"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": "4 3"
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": "4 3"
               }
             },
@@ -171,13 +202,27 @@
               "description": "",
               "outOfScope": true,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": true,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "49c4680e-be83-45d3-a2e4-1362b155e602",
+                  "title": "Credentials should be encrypted",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "The Web Application Config stores credentials used by the Web App. These could be stolen by an attacker and used to read confidential data.",
+                  "mitigation": "The credentials should be encrypted.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -348,8 +393,16 @@
             },
             "vertices": [
               {
-                "x": 410,
-                "y": 430
+                "x": 480,
+                "y": 340
+              },
+              {
+                "x": 420,
+                "y": 400
+              },
+              {
+                "x": 310,
+                "y": 460
               }
             ]
           },
@@ -484,6 +537,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "G06",
-    "threatTop": 3
+    "threatTop": 6
   }
 }
