@@ -1,0 +1,37 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "TD-DEMO",
+    "owner": "G06",
+    "description": "Web application model demonstration.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "pg52679"
+      },
+      {
+        "name": "pg52683"
+      },
+      {
+        "name": "pg52684"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [],
+        "description": "STRIDE"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "G06",
+    "threatTop": 0
+  }
+}
