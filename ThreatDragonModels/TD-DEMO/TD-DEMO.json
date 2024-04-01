@@ -435,7 +435,21 @@
               "isEncrypted": true,
               "isPublicNetwork": true,
               "protocol": "HTTP/S",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3a9789ec-5bd3-4188-92fc-e311662e33d7",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ]
             },
             "id": "92329262-85f4-4b14-85aa-75fd46264c58",
             "source": {
@@ -537,6 +551,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "G06",
-    "threatTop": 6
+    "threatTop": 7
   }
 }
